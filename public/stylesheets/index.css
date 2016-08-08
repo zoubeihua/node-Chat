@@ -1,0 +1,203 @@
+/**
+ * Created by beihua on 2016/8/8.
+ */
+*{
+    list-style: none;
+    font-family:"Microsoft YaHei";
+}
+.h4, .h5, .h6, h4, h5, h6{
+    margin-top: 0;
+}
+.navbar{
+    height: 70px;
+    background-color: #008cee;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.navbar-default{
+    border-color:transparent !important;
+}
+.navbar-brand{
+    padding: 24px 50px;
+    color: #fff !important;
+    font-size: 22px;
+}
+.myinfo{
+    background-color: #e4eaf4;
+    padding-top: 19px;
+    border-right: 1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.row{
+    margin-left: 0;
+    margin-right:0;
+}
+.mytoux{
+    text-align: center;
+    height: 700px;
+    font-size: 18px;
+    font-family:"Microsoft YaHei";
+}
+.userlist,.chatcontent{
+    height: 720px;
+}
+.mytoux img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.mytoux p{
+    margin-top: 6px;
+}
+
+.chatcontent{
+    background-color:#f8fbff;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.clear-p{
+    padding-left: 0 !important;
+    padding-right:0 !important;
+}
+.imglist img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.clear{
+    overflow: hidden;
+}
+.userlist ul{
+    padding: 0;
+    margin-bottom: 0;
+}
+.userlist{
+    background-color: #f5f9ff;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.list-m{
+    padding-top: 14px !important;
+    padding-left: 10px !important;
+}
+.list-h{
+    height: 70px;
+    border-bottom: 1px dashed #ddd;
+}
+.imglist p{
+    margin: 0;
+}
+.newstext{
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999;
+}
+.time{
+    color: #ccc;
+}
+.Chatcontent{
+    height: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.messagparty,.messagmy{
+    width: 70%;
+    margin-bottom: 30px;
+}
+.tox-m{
+    margin-top: 10px;
+}
+.postion{
+    position: relative;
+}
+.partyarticle,.myarticle{
+    margin: 5px 0 0 8px !important;
+    letter-spacing: 1px;
+    float:left;
+    color:#222;
+    display:inline-block;
+*display:inline; zoom:1;
+    padding:5px 8px;
+    border:1px solid #ddd;
+    background:#eee;
+    border-radius:5px;
+    background-color: #fff;
+    /*  background-image:-webkit-gradient(linear,left top,left bottom,from(#4D90FE),to(#4787ED));
+     background-image:-webkit-linear-gradient(top,#4D90FE,#4787ED);
+     background-image:-moz-linear-gradient(center top , #4D90FE, #4787ED);
+     background-image:linear-gradient(top,#4D90FE,#4787ED); */
+}
+.myarticle{
+    margin: 5px 8px 0 0 !important;
+    letter-spacing: 1px;
+    color:#fff;
+    display:inline-block;
+*display:inline; zoom:1;
+    padding:5px 8px;
+    border:1px solid #38adff;
+    background:#eee;
+    border-radius:5px;
+    background-color: #38adff;
+    background-image:-webkit-gradient(linear,left top,left bottom,from(#38adff),to(#38adff));
+    background-image:-webkit-linear-gradient(top,#38adff,#38adff);
+    background-image:-moz-linear-gradient(center top , #38adff, #38adff);
+    background-image:linear-gradient(top,#38adff,#38adff);
+}
+.triangle,.triangleright {
+    position:absolute;
+    top:50%;
+    margin-top:-16px;
+    display:block;
+    width:0;
+    height:0;
+    overflow:hidden;
+    line-height:0;
+    font-size:0;
+    border-bottom:8px solid #FFF;
+    border-top:8px solid #FFF;
+    border-left:none;
+    border-right:8px solid #ddd;
+}
+.triangleright{
+    right: 0 ;
+    border-bottom:8px solid #FFF;
+    border-top:8px solid #FFF;
+    border-right:none;
+    border-left:8px solid #38adff;
+}
+.sendcontent{
+    height: 120px;
+}
+.focusinput{
+    height: 120px;
+    border-right: 1px solid #ddd;
+}
+.sendbtn{
+    height: 119px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 120px;
+    cursor: pointer;
+}
+.btntitle{
+    height: 45px;
+}
+.textarea{
+    height: 75px;
+}
+.textarea textarea{
+    width: 100%;
+    height: 99%;
+    resize: none;
+    border-color: rgba(0,0,0,0);
+    background-color: #f8fbff;
+    padding: 0 20px 0 20px;
+}
+.textarea textarea:focus {
+    outline:none;
+}
