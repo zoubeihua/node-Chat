@@ -3,14 +3,85 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/sco.message.css')
     link(rel='stylesheet', href='/css/scojs.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    script(src='/javascripts/jquery.min.js')
     script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/client.js')
     script(src='/javascripts/clientChat.js')
-    script(src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
-    script(src='//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script(src='/js/bootstrap.min.js')
     script(src='/js/sco.message.js')
   body
     block content
+    .container
+      nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            a.navbar-brand(href='javascript:void(0)')
+              | 米聊
+      .row
+        .myinfo.col-md-1
+          .mytoux
+            img(src='http://b280.photo.store.qq.com/psb?/V13V9c8238NoR6/8HQHDnxXno24pZ7n.QSR6hcWAwPAuMjfm4pe2IBAL9E!/b/dEBa8qYPBAAA&bo=ZABkAAAAAAACEDQ!&rf=viewer_4', alt='')
+            p 千寻
+        .clear-p.userlist.col-md-3
+          ul.clear
+            li.clear.list-m.list-h
+              .imglist.col-md-2.clear-p
+                img(src='/images/4.jpg', alt='')
+              .imglist.col-md-8.clear-p
+                h6 米虫
+                p.newstext
+                  | 看到速回消息，十万火急！！！
+              .imglist.col-md-2.clear-p
+                p.time 80-07
+        .chatcontent.col-md-8.clear-p
+          .Chatcontent
+            .messagparty.pull-left
+              .imglist.userinfo.col-md-1.clear-p.tox-m
+                img(src='http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg', alt='')
+              .imglist.userinfo.col-md-11.clear-p.postion
+                p 米虫
+                span.triangle
+                p.partyarticle
+                  | 是的繁华盛开菊花深度开发计划开始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦
+            .messagmy.pull-right
+              .imglist.userinfo.col-md-1.clear-p.tox-m.pull-right
+                img(src='http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg', alt='')
+              .imglist.userinfo.col-md-11.clear-p.postion.pull-right
+                p.pull-right 管理员
+                span.triangleright.pull-right
+                p.myarticle
+                  | 是的繁华盛开菊花深度开发计划开始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦
+          .sendcontent
+            .focusinput.col-md-10.clear-p
+              .btntitle
+              .textarea
+                textarea
+            .sendbtn.col-md-2.clear-p
+              | 发送
+            .modal.fade#myModal(tabindex="-1")
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    h4.modal-title#myModalLabel 请设置聊天昵称
+                  .modal-body
+                    .form-group
+                      .input-group
+                        .input-group-addon 昵称
+                        input.form-control#username(type="text",value="米虫",onkeydown="javascript:keywordsName(event);")
+                  .modal-footer
+                    input.btn.btn-primary#btn-setName(type="button",value="应用昵称")
 
+            .modal.fade#setMsgToOne(tabindex="-1")
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    h4.modal-title#myModalLabel1
+                  .modal-body
+                    input.form-control#input_msgToOne(type="text",onkeydown="javascript:keywordsName1(event);")
+
+                  .modal-footer
+                    input.btn.btn-primary#btn_toOne(type="button",value="发送/Send")

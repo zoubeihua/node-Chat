@@ -3,19 +3,107 @@
   <head>
     <title></title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/sco.message.css">
     <link rel="stylesheet" href="/css/scojs.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="/javascripts/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/client.js"></script>
     <script src="/javascripts/clientChat.js"></script>
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/js/sco.message.js"></script>
   </head>
   <body>
-    <h1></h1>
-    <p>Welcome to </p>
-    <div></div>
-  </body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header"><a href="javascript:void(0)" class="navbar-brand">米聊</a></div>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="myinfo col-md-1">
+          <div class="mytoux"><img src="http://b280.photo.store.qq.com/psb?/V13V9c8238NoR6/8HQHDnxXno24pZ7n.QSR6hcWAwPAuMjfm4pe2IBAL9E!/b/dEBa8qYPBAAA&amp;bo=ZABkAAAAAAACEDQ!&amp;rf=viewer_4" alt="">
+            <p>千寻</p>
+          </div>
+        </div>
+        <div class="clear-p userlist col-md-3">
+          <ul class="clear">
+            <li class="clear list-m list-h">
+              <div class="imglist col-md-2 clear-p"><img src="/images/4.jpg" alt=""></div>
+              <div class="imglist col-md-8 clear-p">
+                <h6>米虫</h6>
+                <p class="newstext">看到速回消息，十万火急！！！</p>
+              </div>
+              <div class="imglist col-md-2 clear-p">
+                <p class="time">80-07</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="chatcontent col-md-8 clear-p">
+          <div class="Chatcontent">
+            <div class="messagparty pull-left">
+              <div class="imglist userinfo col-md-1 clear-p tox-m"><img src="http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg" alt=""></div>
+              <div class="imglist userinfo col-md-11 clear-p postion">
+                <p>米虫</p><span class="triangle"></span>
+                <p class="partyarticle">是的繁华盛开菊花深度开发计划开始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦</p>
+              </div>
+            </div>
+            <div class="messagmy pull-right">
+              <div class="imglist userinfo col-md-1 clear-p tox-m pull-right"><img src="http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg" alt=""></div>
+              <div class="imglist userinfo col-md-11 clear-p postion pull-right">
+                <p class="pull-right">管理员</p><span class="triangleright pull-right"></span>
+                <p class="myarticle">是的繁华盛开菊花深度开发计划开始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦</p>
+              </div>
+            </div>
+          </div>
+          <div class="sendcontent">
+            <div class="focusinput col-md-10 clear-p">
+              <div class="btntitle"></div>
+              <div class="textarea">
+                <textarea></textarea>
+              </div>
+            </div>
+            <div class="sendbtn col-md-2 clear-p">发送</div>
+            <div id="myModal" tabindex="-1" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 id="myModalLabel" class="modal-title">请设置聊天昵称</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-addon">昵称</div>
+                        <input id="username" type="text" value="米虫" onkeydown="javascript:keywordsName(event);" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input id="btn-setName" type="button" value="应用昵称" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="setMsgToOne" tabindex="-1" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 id="myModalLabel1" class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <input id="input_msgToOne" type="text" onkeydown="javascript:keywordsName1(event);" class="form-control">
+                  </div>
+                  <div class="modal-footer">
+                    <input id="btn_toOne" type="button" value="发送/Send" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
