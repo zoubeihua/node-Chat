@@ -17,9 +17,10 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="col-md-3">
           <div class="navbar-header"><a href="javascript:void(0)" class="navbar-brand">米聊</a></div>
         </div>
+        <div class="col-md-9 welcome"><span id="spanuser"></span></div>
       </nav>
       <div class="row">
         <div class="myinfo col-md-1">
@@ -27,8 +28,8 @@
             <p>千寻</p>
           </div>
         </div>
-        <div class="clear-p userlist col-md-3">
-          <ul class="clear">
+        <div class="clear-p userlist col-md-3 user-content">
+          <ul id="userListConent" class="clear">
             <li class="clear list-m list-h">
               <div class="imglist col-md-2 clear-p"><img src="/images/4.jpg" alt=""></div>
               <div class="imglist col-md-8 clear-p">
@@ -42,30 +43,29 @@
           </ul>
         </div>
         <div class="chatcontent col-md-8 clear-p">
-          <div class="Chatcontent">
-            <div class="messagparty pull-left">
-              <div class="imglist userinfo col-md-1 clear-p tox-m"><img src="http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg" alt=""></div>
-              <div class="imglist userinfo col-md-11 clear-p postion">
-                <p>米虫</p><span class="triangle"></span>
-                <p class="partyarticle">是的繁华盛开菊花深度开发计划开始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦</p>
-              </div>
-            </div>
-            <div class="messagmy pull-right">
-              <div class="imglist userinfo col-md-1 clear-p tox-m pull-right"><img src="http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg" alt=""></div>
-              <div class="imglist userinfo col-md-11 clear-p postion pull-right">
-                <p class="pull-right">管理员</p><span class="triangleright pull-right"></span>
-                <p class="myarticle">是的繁华盛开菊花深度开发计划开始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦始地方开始觉得很烦</p>
-              </div>
-            </div>
+          <div id="Chatcontent" class="Chatcontent">
+            <!-- .messagparty-->
+            <!-- .imglist.userinfo.col-md-1.clear-p.tox-m-->
+            <!-- img(src='http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg', alt='')-->
+            <!--.imglist.userinfo.col-md-11.clear-p.postion// <p>米虫</p><span class="triangle"></span>
+            -->
+            <!-- p.partyarticle 方开始觉-->
+            <!-- .messagmy-->
+            <!-- .imglist.userinfo.col-md-1.clear-p.tox-m.pull-right-->
+            <!-- img(src='http://v1.qzone.cc/avatar/201308/06/14/59/52009ed09a645524.bmp%21200x200.jpg', alt='')-->
+            <!-- .imglist.userinfo.col-md-11.clear-p.postion.pull-right-->
+            <!-- p.pull-right 管理员-->
+            <!-- // <span class="triangleright pull-right"></span>-->
+            <!-- p.myarticle 是的繁-->
           </div>
           <div class="sendcontent">
             <div class="focusinput col-md-10 clear-p">
               <div class="btntitle"></div>
               <div class="textarea">
-                <textarea></textarea>
+                <textarea id="msg"></textarea>
               </div>
             </div>
-            <div class="sendbtn col-md-2 clear-p">发送</div>
+            <div id="sendmsg" class="sendbtn col-md-2 clear-p">发送</div>
             <div id="myModal" tabindex="-1" class="modal fade">
               <div class="modal-dialog">
                 <div class="modal-content">
