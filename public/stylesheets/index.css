@@ -107,6 +107,10 @@
 .messagparty,.messagmy{
     width: 70%;
     margin-bottom: 30px;
+    float: left;
+}
+.messagmy{
+    float: right;
 }
 .tox-m{
     margin-top: 10px;
@@ -135,6 +139,7 @@
     margin: 5px 8px 0 0 !important;
     letter-spacing: 1px;
     color:#fff;
+    float: right;
     display:inline-block;
 *display:inline; zoom:1;
     padding:5px 8px;
@@ -200,4 +205,14 @@
 }
 .textarea textarea:focus {
     outline:none;
+}
+.user-content{
+    overflow-y: scroll;
+}
+.welcome{
+    height: 70px;
+    color: #fff;
+    line-height: 70px;
+    text-align: right;
+    font-size: 21px;
 }
