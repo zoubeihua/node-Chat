@@ -55,7 +55,7 @@ html
             .focusinput.col-md-10.clear-p
               .btntitle
               .textarea
-                textarea#msg
+                textarea#msg(onKeyDown="javascript:keywordsMsg(event);")
             #sendmsg.sendbtn.col-md-2.clear-p 发送
             #myModal.modal.fade(tabindex='-1')
               .modal-dialog
