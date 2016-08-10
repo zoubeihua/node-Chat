@@ -75,7 +75,7 @@ $(function(){
 function keywordsMsg(e){
     var event1 = e || window.event;
     if(event1.keyCode == 13){
-        $('#sendMsg').click();
+        $('#sendmsg').click();
     }
 }
 
@@ -97,6 +97,8 @@ function keywordsName1(e){
 //上线用户全加入列表
 function  addUser(userList) {
     var userListConent = document.getElementById("userListConent");
+    var d = new Date();
+    var dates = (d.getMonth()+1)+"-"+d.getDate();
     if(userlistArray.length > 0)
     {
         for(var i = 0; i < userlistArray.length; i++)
@@ -105,8 +107,6 @@ function  addUser(userList) {
         }
     }
     userlistArray = new Array();
-    var d = new Date();
-    var dates = (d.getMonth()+1)+"-"+d.getDate();
     for(var i = 0; i < userList.length; i++)
     {
         var Elli = document.createElement("li");
@@ -147,11 +147,8 @@ function  addUser(userList) {
     }
 }
 //离线移除用户对象
-function removeuser(userList){
-    if(checkUser(userList.name))
-    {
-
-    }
+function removeUser(userList){
+    
 }
 //添加消息到消息列表
 function addMsgFromUser(msgObj,isSelf){
