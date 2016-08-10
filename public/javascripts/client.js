@@ -3,6 +3,7 @@
  */
 var userSelf = {};
 var toOneId;
+var userlistArray = new Array();
 $(function(){
     $('#myModal').modal({
         keyboard: false
@@ -96,13 +97,22 @@ function keywordsName1(e){
 //上线用户全加入列表
 function  addUser(userList) {
     var userListConent = document.getElementById("userListConent");
+    if(userlistArray.length > 0)
+    {
+        for(var i = 0; i < userlistArray.length; i++)
+        {
+            userListConent.removeChild(userlistArray[i]);
+        }
+    }
+    userlistArray = new Array();
     var d = new Date();
-    var dates = "0"+(d.getMonth()+1)+"-0"+d.getDate();
+    var dates = (d.getMonth()+1)+"-"+d.getDate();
     for(var i = 0; i < userList.length; i++)
     {
         var Elli = document.createElement("li");
         Elli.className = "clear list-m list-h";
         userListConent.appendChild(Elli);
+        userlistArray.push(Elli);
 
         var Ediv = document.createElement("div");
         Ediv.className = "imglist col-md-2 clear-p";
@@ -134,6 +144,13 @@ function  addUser(userList) {
         Etimep.innerHTML = dates;
         Etimep.className = "time";
         Etimediv.appendChild(Etimep);
+    }
+}
+//离线移除用户对象
+function removeuser(userList){
+    if(checkUser(userList.name))
+    {
+
     }
 }
 //添加消息到消息列表
@@ -208,6 +225,14 @@ function addMsgFromUser(msgObj,isSelf){
 }
 
 //上线消息显示
-function addMsgFromSys(msg){
-    $.scojs_message(msg, $.scojs_message.TYPE_OK);
+function addMsgFromSys(msg,type){
+    if(type == 1)
+    {
+        $.scojs_message(msg, $.scojs_message.TYPE_OK);
+    }
+    else
+    {
+        $.scojs_message(msg, $.scojs_message.TYPE_TYPE_ERROR);
+    }
+
 }
