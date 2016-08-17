@@ -4,6 +4,7 @@ html
     title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='/css/sco.message.css')
     link(rel='stylesheet', href='/css/scojs.css')
     link(rel='stylesheet', href='/stylesheets/index.css')
@@ -11,6 +12,9 @@ html
     script(src='/socket.io/socket.io.js')
     script(src='/javascripts/client.js')
     script(src='/javascripts/clientChat.js')
+    script(src='/javascripts/jquery.qqFace.js')
+    script(src='/javascripts/jquery-browser.js')
+    script(src='/javascripts/qqFace.js')
     script(src='/js/bootstrap.min.js')
     script(src='/js/sco.message.js')
   body
@@ -28,14 +32,14 @@ html
             p#userid
         .clear-p.userlist.col-md-3.user-content
           ul#userListConent.clear
-            //li.clear.list-m.list-h
-            //  .imglist.col-md-2.clear-p
-            //    img(src='/images/4.jpg', alt='')
-            //  .imglist.col-md-8.clear-p
-            //    h6 米虫
-            //    p.newstext 看到速回消息，十万火急！！！
-            //  .imglist.col-md-2.clear-p
-            //    p.time 80-07
+            // li.clear.list-m.list-h
+            // .imglist.col-md-2.clear-p
+            // img(src='/images/4.jpg', alt='')
+            // .imglist.col-md-8.clear-p
+            // h6 米虫
+            // p.newstext 看到速回消息，十万火急！！！
+            // .imglist.col-md-2.clear-p
+            // p.time 80-07
         .chatcontent.col-md-8.clear-p
           #Chatcontent.Chatcontent
             // .messagparty
@@ -54,8 +58,10 @@ html
           .sendcontent
             .focusinput.col-md-10.clear-p
               .btntitle
+                span#emotion
+                  i.fa.fa-smile-o(aria-hidden='true')
               .textarea
-                textarea#msg(onKeyDown="javascript:keywordsMsg(event);")
+                textarea#msg(onkeydown='javascript:keywordsMsg(event);')
             #sendmsg.sendbtn.col-md-2.clear-p 发送
             #myModal.modal.fade(tabindex='-1')
               .modal-dialog

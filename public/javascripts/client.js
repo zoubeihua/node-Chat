@@ -182,7 +182,7 @@ function addMsgFromUser(msgObj,isSelf){
 
         var Elmsgp = document.createElement("p");
         Elmsgp.className = "partyarticle";
-        Elmsgp.innerHTML = msgObj.msg;
+        Elmsgp.innerHTML = replace_em(msgObj.msg);
         Emessagparty.appendChild(Elmsgp);
     }
     else
@@ -214,7 +214,7 @@ function addMsgFromUser(msgObj,isSelf){
 
         var Elmsgp = document.createElement("p");
         Elmsgp.className = "myarticle";
-        Elmsgp.innerHTML = msgObj.msg;
+        Elmsgp.innerHTML = replace_em(msgObj.msg);
         Emessagparty.appendChild(Elmsgp);
     }
     $(".Chatcontent").scrollTop($(".Chatcontent")[0].scrollHeight);
