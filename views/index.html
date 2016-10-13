@@ -24,22 +24,20 @@
       </nav>
       <div class="row">
         <div class="myinfo col-md-1">
-          <div class="mytoux"><img src="http://b280.photo.store.qq.com/psb?/V13V9c8238NoR6/8HQHDnxXno24pZ7n.QSR6hcWAwPAuMjfm4pe2IBAL9E!/b/dEBa8qYPBAAA&amp;bo=ZABkAAAAAAACEDQ!&amp;rf=viewer_4" alt="">
-            <p>千寻</p>
+          <div class="mytoux"><img id="userimg" src="" alt="">
+            <p id="userid"></p>
           </div>
         </div>
         <div class="clear-p userlist col-md-3 user-content">
           <ul id="userListConent" class="clear">
-            <li class="clear list-m list-h">
-              <div class="imglist col-md-2 clear-p"><img src="/images/4.jpg" alt=""></div>
-              <div class="imglist col-md-8 clear-p">
-                <h6>米虫</h6>
-                <p class="newstext">看到速回消息，十万火急！！！</p>
-              </div>
-              <div class="imglist col-md-2 clear-p">
-                <p class="time">80-07</p>
-              </div>
-            </li>
+            <!--li.clear.list-m.list-h-->
+            <!--  .imglist.col-md-2.clear-p-->
+            <!--    img(src='/images/4.jpg', alt='')-->
+            <!--  .imglist.col-md-8.clear-p-->
+            <!--    h6 米虫-->
+            <!--    p.newstext 看到速回消息，十万火急！！！-->
+            <!--  .imglist.col-md-2.clear-p-->
+            <!--    p.time 80-07-->
           </ul>
         </div>
         <div class="chatcontent col-md-8 clear-p">
@@ -62,7 +60,7 @@
             <div class="focusinput col-md-10 clear-p">
               <div class="btntitle"></div>
               <div class="textarea">
-                <textarea id="msg"></textarea>
+                <textarea id="msg" onKeyDown="javascript:keywordsMsg(event);"></textarea>
               </div>
             </div>
             <div id="sendmsg" class="sendbtn col-md-2 clear-p">发送</div>
