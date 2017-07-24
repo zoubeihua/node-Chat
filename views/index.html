@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>e米虫圣</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/sco.message.css">
     <link rel="stylesheet" href="/css/scojs.css">
     <link rel="stylesheet" href="/stylesheets/index.css">
@@ -11,6 +12,9 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/javascripts/client.js"></script>
     <script src="/javascripts/clientChat.js"></script>
+    <script src="/javascripts/jquery.qqFace.js"></script>
+    <script src="/javascripts/jquery-browser.js"></script>
+    <script src="/javascripts/qqFace.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/sco.message.js"></script>
   </head>
@@ -30,14 +34,14 @@
         </div>
         <div class="clear-p userlist col-md-3 user-content">
           <ul id="userListConent" class="clear">
-            <!--li.clear.list-m.list-h-->
-            <!--  .imglist.col-md-2.clear-p-->
-            <!--    img(src='/images/4.jpg', alt='')-->
-            <!--  .imglist.col-md-8.clear-p-->
-            <!--    h6 米虫-->
-            <!--    p.newstext 看到速回消息，十万火急！！！-->
-            <!--  .imglist.col-md-2.clear-p-->
-            <!--    p.time 80-07-->
+            <!-- li.clear.list-m.list-h-->
+            <!-- .imglist.col-md-2.clear-p-->
+            <!-- img(src='/images/4.jpg', alt='')-->
+            <!-- .imglist.col-md-8.clear-p-->
+            <!-- h6 米虫-->
+            <!-- p.newstext 看到速回消息，十万火急！！！-->
+            <!-- .imglist.col-md-2.clear-p-->
+            <!-- p.time 80-07-->
           </ul>
         </div>
         <div class="chatcontent col-md-8 clear-p">
@@ -58,9 +62,9 @@
           </div>
           <div class="sendcontent">
             <div class="focusinput col-md-10 clear-p">
-              <div class="btntitle"></div>
+              <div class="btntitle"><span id="emotion"><i aria-hidden="true" class="fa fa-smile-o"></i></span></div>
               <div class="textarea">
-                <textarea id="msg" onKeyDown="javascript:keywordsMsg(event);"></textarea>
+                <textarea id="msg" onkeydown="javascript:keywordsMsg(event);"></textarea>
               </div>
             </div>
             <div id="sendmsg" class="sendbtn col-md-2 clear-p">发送</div>
